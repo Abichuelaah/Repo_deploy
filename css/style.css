@@ -1,0 +1,89 @@
+/** BODY **/
+/* Header */
+header {
+    width: 87%;
+    max-width: 160rem;
+    margin: 2rem auto; /* Margen superior e inferior de rem, y centrado horizontalmente */
+    padding: 0 1rem; /* Agregar un poco de espacio entre los elementos */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribuir los elementos horizontalmente */
+}
+.titulo {
+    background: linear-gradient(to right, #CF19A2 0%, #180ECF 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 4rem; /* Tamaño de fuente ajustado */
+    margin: 0 auto; /* Centrar horizontalmente */
+}
+
+/* Main */
+main {
+    width: 87%;
+    max-width: 160rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media (min-width: 768px) {
+    main {
+        width: 92%;
+    }
+}
+
+
+/* Cuadros */
+.cuadros {
+    width: 100%; /* Cambiado para ocupar el ancho completo de main */
+    display: grid;
+    grid-gap: 2rem; /* Espacio entre los cuadros */
+    margin-bottom: 3rem;
+}
+.text-area, .mensaje {
+    display: grid;
+    grid-column: 1 / span 2;
+}
+
+@media (min-width: 768px) {
+    .cuadros {
+        grid-template-columns: 1fr 1fr;
+    }
+    .text-area {
+        grid-row: 1; /* Primera fila */
+        grid-column: 1; /* Primera columna */
+    }
+    .mensaje {
+        grid-row: 1;
+        grid-column: 2;
+    }
+}
+
+
+/* Botones */
+.bts {
+    max-width: 10rem;
+    background: #eb94d0;
+}
+.cuadros.botones {
+    display: flex;
+    flex-direction: column; /* Los botones se mostrarán uno debajo del otro */
+    align-items: center; /* Centrar horizontalmente los botones */
+    background-image: -webkit-linear-gradient(top, #eb94d0, #2079b0);
+}
+.copiar {
+    grid-row: 3; /* Primera fila */
+    grid-column: 2; /* Segunda columna */
+}
+
+@media (min-width: 768px) {
+    .cuadros.botones {
+        flex-direction: row; /* Volver a la disposición horizontal para dispositivos más grandes */
+        justify-content: center; /* Centrar horizontalmente los botones */
+    }
+    .copiar {
+        grid-row: auto;
+        grid-column: auto;
+    }
+}
